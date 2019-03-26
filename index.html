@@ -12,25 +12,16 @@
 </head>
 
 <body>
-    <div id="vue-app">
-        <!-- bag image -->
-        <div id="bag" :class="{ burst:ended}"></div>
-        <!-- bag health -->
-        <div id="bag-health">
-            <!-- 動態綁定css style -->
-            <div :style="{ width:health + '%'}"></div>
-
-        </div>
-        <!-- game controls -->
-        <div id="controls">
-            <button @click="punch" v-show="!ended">Punch</button>
-            <button @click="restart">Restart</button>
-        </div>
-        {{health}}
+    <h1>Components</h1>
+    <div id="vue-app-one">
+        <h2>Vue app one</h2>
+        <greeting></greeting>
     </div>
-
-
-    <script src=" app.js"></script>
+    <div id="vue-app-two">
+        <h2>Vue app two</h2>
+        <greeting></greeting>
+    </div>
 </body>
+<script src=" app.js"></script>
 
 </html>

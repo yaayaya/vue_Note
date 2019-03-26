@@ -1,25 +1,23 @@
-new Vue({
-    el: '#vue-app',
-    data: {
-        health: 100,
-        ended: false
+Vue.component('greeting', {
+    template: '<p>I am {{name}} . <button @click="changeName">Change name </button> </p>',
+    data() {
+        return {
+            name: "YA_01"
+        }
     },
     methods: {
-        punch() {
-            this.health -= 10;
-            if (this.health <= 0) {
-                this.ended = true;
-            }
-        },
-        restart() {
-            this.health = 100;
-            this.ended = false;
+        changeName() {
+            this.name = "YA_02"
         }
-
-
-
-    },
-    computed: {
-
     }
+})
+
+new Vue({
+    el: '#vue-app-one',
+
+});
+
+new Vue({
+    el: '#vue-app-two',
+
 });
