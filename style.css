@@ -1,16 +1,28 @@
-span {
-    background: red;
-    display: inline-block;
-    padding: 10px;
-    color: #fff;
-    margin: 10px 0;
+#bag {
+    widows: 200px;
+    height: 500px;
+    margin: 0 auto;
+    background: url(/Image/bag.png) center no-repeat;
+    background-size: 15%
 }
 
-.available span {
-    background: green;
+#bag.burst {
+    background: url(/Image/bag-burst.png) center no-repeat;
+    background-size: 15%
 }
 
-.nearby span:after {
-    content: "nearby";
-    margin-left: 10px
+#bag-health {
+    width: 200px;
+    border: 2px solid #000;
+    margin: 0 auto 20px auto;
+}
+
+#bag-health div {
+    height: 20px;
+    background: crimson;
+}
+
+#controls {
+    width: 120px;
+    margin: 0 auto;
 }

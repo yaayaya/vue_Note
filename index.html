@@ -13,26 +13,23 @@
 
 <body>
     <div id="vue-app">
-        <h1>Looping through lists</h1>
-        <ul>
-            <li v-for="(character, index) in characters">{{index}} .{{character}}</li>
-        </ul>
-        <ul>
-            <li v-for="(ninja ,index) in ninjas">{{index}} .{{ninja.name}} - {{ninja.age}}</li>
-        </ul>
-        <!-- 使用template 在html乾淨  無外框標記 -->
-        <template v-for="(ninja ,index) in ninjas">
-            <h3>{{index}} . {{ninja.name}}</h3>
-            <p>{{ninja.age}}</p>
-        </template>
-        <template v-for="ninja in ninjas">
-            <div v-for="(val,key) in ninja">
-                <p>{{key}}-{{val}}</p>
+        <!-- bag image -->
+        <div id="bag" :class="{ burst:ended}"></div>
+        <!-- bag health -->
+        <div id="bag-health">
+            <!-- 動態綁定css style -->
+            <div :style="{ width:health + '%'}"></div>
 
-            </div>
-        </template>
-
+        </div>
+        <!-- game controls -->
+        <div id="controls">
+            <button @click="punch" v-show="!ended">Punch</button>
+            <button @click="restart">Restart</button>
+        </div>
+        {{health}}
     </div>
+
+
     <script src=" app.js"></script>
 </body>
 
