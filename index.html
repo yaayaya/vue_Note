@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+
+<body>
+    <div id="vue-app">
+        <!-- 動態切換CSS -->
+        <h1>Dynamic Css</h1>
+        <h2>Example 1</h2>
+        <!-- <div @click="available = !available" :class="{available:available}">
+            <span>YA</span>
+        </div> -->
+        <h2>Example2</h2>
+        <button @click="nearby =!nearby">Toggle nearby</button>
+        <button @click="available = !available">Toggle available</button>
+
+        <div :class="compClasses">
+            <span>ya</span>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
