@@ -13,21 +13,27 @@
 
 <body>
     <div id="vue-app">
-        <!-- 動態切換CSS -->
-        <h1>Dynamic Css</h1>
-        <h2>Example 1</h2>
-        <!-- <div @click="available = !available" :class="{available:available}">
-            <span>YA</span>
-        </div> -->
-        <h2>Example2</h2>
-        <button @click="nearby =!nearby">Toggle nearby</button>
-        <button @click="available = !available">Toggle available</button>
+        <h1>Looping through lists</h1>
+        <ul>
+            <li v-for="(character, index) in characters">{{index}} .{{character}}</li>
+        </ul>
+        <ul>
+            <li v-for="(ninja ,index) in ninjas">{{index}} .{{ninja.name}} - {{ninja.age}}</li>
+        </ul>
+        <!-- 使用template 在html乾淨  無外框標記 -->
+        <template v-for="(ninja ,index) in ninjas">
+            <h3>{{index}} . {{ninja.name}}</h3>
+            <p>{{ninja.age}}</p>
+        </template>
+        <template v-for="ninja in ninjas">
+            <div v-for="(val,key) in ninja">
+                <p>{{key}}-{{val}}</p>
 
-        <div :class="compClasses">
-            <span>ya</span>
-        </div>
+            </div>
+        </template>
+
     </div>
-    <script src="app.js"></script>
+    <script src=" app.js"></script>
 </body>
 
 </html>
